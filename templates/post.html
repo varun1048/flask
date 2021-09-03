@@ -4,16 +4,22 @@
 {%endblock%}
 
 {% block body %}
+<hr>
+<form action="/posts" method="POST">
+    Title :<input type="text" name="title" id="title"><br>
+    Post :<input type="text" name="post" id="post"> <br>
+    <input type="submit" >
+</form>
+<hr>
+
+
+
 {% for x in datas%}
  <h3>
-    songs :{{x.songs}}
-    hero  :{{x.hero}}
-    {%if x.singer%}
-        singer :{{x.singer}}
-    {% else %}
-        singer : N/A
-    {%endif%}
+    title :{{x.title}}
+    content  :{{x.contnet}}
 
  </h3>
 {% endfor%}
 {%endblock%}
+tit
