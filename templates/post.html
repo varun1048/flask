@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %} 
+<title>post</title>
+{%endblock%}
+
+{% block body %}
+{% for x in datas%}
+ <h3>
+    songs :{{x.songs}}
+    hero  :{{x.hero}}
+    {%if x.singer%}
+        singer :{{x.singer}}
+    {% else %}
+        singer : N/A
+    {%endif%}
+
+ </h3>
+{% endfor%}
+{%endblock%}
