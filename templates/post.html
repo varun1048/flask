@@ -13,12 +13,12 @@
 <hr>
 
 
-
 {% for x in datas%}
  <h3>
-    title :{{x.title}}
-    content  :{{x.contnet}}
-
+    Title :{{x.title}}
+    Content  :{{x.contnet}} <br>
+    <a  href="/posts/delete/{{x.id}}">Delete</a>
+    <a  href="/posts/edit/{{x.id}}">edit</a>
  </h3>
 {% endfor%}
 {%endblock%}
