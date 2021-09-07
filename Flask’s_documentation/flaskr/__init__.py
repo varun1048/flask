@@ -37,17 +37,21 @@ def create_app(test_config=None):
     def hello():
         return 'Hello,varun!'
     
-    @app.route('/')
-    def index():
-        return render_template('base.html')
+    # @app.route('/')
+    # def index():
+    #     return render_template('base.html')
     
-    @app.route('/register')
-    def register():
-        return render_template('auth/register.html')
+    # @app.route('/register')
+    # def register():
+    #     return render_template('auth/register.html')
     
-    @app.route('/login')
-    def login():
-        return render_template('auth/login.html')
+    # @app.route('/login')
+    # def login():
+    #     return render_template('auth/login.html')
+
+    from . import blog
+    app.register_blueprint(blog.bp)
+    app.add_url_rule('/', endpoint='index')
 
     return app
 
